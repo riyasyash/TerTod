@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "td"
+dynamic = ["version"]
+description = "A clean terminal-based todo app with sub-todos and due dates"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Riya Syash" },
+]
+keywords = ["todo", "cli", "terminal", "tui", "productivity"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Scheduling",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "typer>=0.12.0",
+    "rich>=13.7.0",
+    "textual>=0.80.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/riyasyash/td"
+Repository = "https://github.com/riyasyash/td"
+Issues = "https://github.com/riyasyash/td/issues"
+
+[project.scripts]
+td = "td.cli:app"
+
+[tool.hatch.version]
+path = "td/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["td"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/td",
+    "/README.md",
+    "/LICENSE",
+]

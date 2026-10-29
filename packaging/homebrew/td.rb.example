@@ -1,0 +1,28 @@
+# Example Homebrew formula for a personal tap.
+#
+# Copy to your tap repo, e.g. homebrew-tools/Formula/td.rb
+# Update `url` and `sha256` after publishing a GitHub release tag.
+#
+# Get the sha256 after creating a release:
+#   curl -L https://github.com/riyasyash/td/archive/refs/tags/v0.0.1.tar.gz | shasum -a 256
+
+class Td < Formula
+  include Language::Python::Virtualenv
+
+  desc "Terminal todo app with sub-todos, due dates, and git sync"
+  homepage "https://github.com/riyasyash/td"
+  url "https://github.com/riyasyash/td/archive/refs/tags/v0.0.1.tar.gz"
+  sha256 "REPLACE_WITH_SHA256_AFTER_RELEASE"
+  license "MIT"
+
+  depends_on "python@3.12"
+
+  def install
+    virtualenv_install_with_resources
+  end
+
+  test do
+    assert_match "td v", shell_output("#{bin}/td --version")
+    system bin/"td", "--cli", "list"
+  end
+end
