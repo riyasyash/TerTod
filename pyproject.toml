@@ -34,9 +34,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/riyasyash/td"
-Repository = "https://github.com/riyasyash/td"
-Issues = "https://github.com/riyasyash/td/issues"
+Homepage = "https://github.com/riyasyash/TerTod"
+Repository = "https://github.com/riyasyash/TerTod"
+Issues = "https://github.com/riyasyash/TerTod/issues"
 
 [project.scripts]
 td = "td.cli:app"

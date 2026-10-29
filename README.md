@@ -17,13 +17,13 @@ See [packaging/homebrew/td.rb.example](packaging/homebrew/td.rb.example) for the
 ### From GitHub
 
 ```bash
-pip install git+https://github.com/riyasyash/td.git
+pip install git+https://github.com/riyasyash/TerTod.git
 ```
 
 Or install a tagged release:
 
 ```bash
-pip install https://github.com/riyasyash/td/archive/refs/tags/v0.0.1.tar.gz
+pip install https://github.com/riyasyash/TerTod/archive/refs/tags/v0.0.1.tar.gz
 ```
 
 ### Development
@@ -31,7 +31,7 @@ pip install https://github.com/riyasyash/td/archive/refs/tags/v0.0.1.tar.gz
 Homebrew Python blocks system-wide `pip install`. Use a virtual environment:
 
 ```bash
-git clone https://github.com/riyasyash/td.git
+git clone https://github.com/riyasyash/TerTod.git
 cd td
 python3 -m venv .venv
 source .venv/bin/activate
